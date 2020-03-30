@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="69.5" width="375" height="553.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="150" id="sx0-Us-Ec9" customClass="CategoryCellTableViewCell" customModule="coder_swag" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="150" id="sx0-Us-Ec9" customClass="CategoryCell" customModule="coder_swag" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sx0-Us-Ec9" id="TRR-3L-Msu">
@@ -34,6 +34,9 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digital" translatesAutoresizingMaskIntoConstraints="NO" id="ixN-gZ-07i">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="150" id="iR3-vr-TmD"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOODIES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3l-K7-vMj">
                                                     <rect key="frame" x="114" y="62" width="147" height="26"/>
@@ -47,12 +50,12 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="ixN-gZ-07i" firstAttribute="top" secondItem="TRR-3L-Msu" secondAttribute="top" id="1UH-wE-mgV"/>
-                                                <constraint firstItem="ixN-gZ-07i" firstAttribute="leading" secondItem="TRR-3L-Msu" secondAttribute="leading" id="81S-AY-eFu"/>
+                                                <constraint firstAttribute="trailing" secondItem="ixN-gZ-07i" secondAttribute="trailing" id="B8I-Bh-KQ4"/>
+                                                <constraint firstItem="ixN-gZ-07i" firstAttribute="leading" secondItem="TRR-3L-Msu" secondAttribute="leading" id="CHp-7F-HU2"/>
                                                 <constraint firstItem="n3l-K7-vMj" firstAttribute="centerX" secondItem="TRR-3L-Msu" secondAttribute="centerX" id="QJ9-aq-VUs"/>
                                                 <constraint firstItem="n3l-K7-vMj" firstAttribute="centerY" secondItem="TRR-3L-Msu" secondAttribute="centerY" id="ZdM-K5-dcX"/>
-                                                <constraint firstAttribute="bottom" secondItem="ixN-gZ-07i" secondAttribute="bottom" id="iuv-1I-4CI"/>
-                                                <constraint firstAttribute="trailing" secondItem="ixN-gZ-07i" secondAttribute="trailing" id="m45-PF-PIB"/>
+                                                <constraint firstItem="ixN-gZ-07i" firstAttribute="top" secondItem="TRR-3L-Msu" secondAttribute="top" id="p6l-R6-QNK"/>
+                                                <constraint firstAttribute="bottom" secondItem="ixN-gZ-07i" secondAttribute="bottom" id="y1g-dD-tM8"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -76,7 +79,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="CODER SWAG" id="enO-p9-JXU"/>
                     <connections>
-                        <outlet property="caregoryTable" destination="bdH-Mw-yuK" id="2Oa-R6-VSe"/>
+                        <outlet property="categoryTable" destination="bdH-Mw-yuK" id="2Oa-R6-VSe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
